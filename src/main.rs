@@ -1,5 +1,7 @@
 #[macro_use]
 extern crate rocket;
+#[macro_use]
+extern crate diesel;
 
 #[get("/health")]
 fn health_check() -> &'static str {

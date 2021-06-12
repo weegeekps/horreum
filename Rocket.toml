@@ -1,0 +1,3 @@
+[development]
+address = "localhost"
+database = { horreum_db = { url = "postgres://horreum_dev:horreum123@localhost/horreum" }}
