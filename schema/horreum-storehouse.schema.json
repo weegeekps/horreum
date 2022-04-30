@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "horreum-req.schema.json",
+  "title": "Horreum Request",
+  "description": "Represents a Horreum request",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Unique identifier",
+      "type": "string"
+    },
+    "data": {
+      "description": "JSON object of the data to store.",
+      "type": "object"
+    },
+    "createdDate": {
+      "type": "date-time"
+    },
+    "modifiedDate": {
+      "type": "date-time"
+    },
+    "owner": {
+      "description": "Identifier of the owner.",
+      "type": "string"
+    },
+    "type": {
+      "description": "Identifies the type of data. Used for filtering on retrieval.",
+      "type": "string"
+    }
+  }
+}

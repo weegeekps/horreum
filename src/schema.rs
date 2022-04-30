@@ -1,7 +1,7 @@
 table! {
     group (id) {
-        id -> Uuid,
-        name -> Varchar,
+        id -> Nullable<Text>,
+        name -> Text,
         created_on -> Timestamp,
         modified_on -> Timestamp,
     }
@@ -9,21 +9,21 @@ table! {
 
 table! {
     storehouse (id) {
-        id -> Uuid,
-        data -> Jsonb,
+        id -> Nullable<Text>,
+        data -> Text,
         created_on -> Timestamp,
         modified_on -> Timestamp,
-        owner -> Nullable<Uuid>,
+        owner -> Nullable<Text>,
         #[sql_name = "type"]
-        type_ -> Nullable<Uuid>,
+        type_ -> Nullable<Text>,
     }
 }
 
 table! {
     type (id) {
-        id -> Uuid,
-        name -> Varchar,
-        description -> Nullable<Varchar>,
+        id -> Nullable<Text>,
+        name -> Text,
+        description -> Nullable<Text>,
         created_on -> Timestamp,
         modified_on -> Timestamp,
     }
@@ -31,9 +31,9 @@ table! {
 
 table! {
     user (id) {
-        id -> Uuid,
-        name -> Varchar,
-        password -> Varchar,
+        id -> Nullable<Text>,
+        name -> Text,
+        password -> Text,
         enabled -> Bool,
         admin -> Bool,
         created_on -> Timestamp,
@@ -43,8 +43,8 @@ table! {
 
 table! {
     user_group (user_id, group_id) {
-        user_id -> Uuid,
-        group_id -> Uuid,
+        user_id -> Nullable<Text>,
+        group_id -> Nullable<Text>,
     }
 }
 
